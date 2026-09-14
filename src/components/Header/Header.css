@@ -1,0 +1,110 @@
+@media (hover: hover) and (pointer: fine) {
+  .header_link:hover {
+    color: var(--color-primary-400);
+  }
+}
+.header {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: var(--header-height);
+  align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+.header_container {
+  display: flex;
+  align-items: center;
+  min-height: var(--header-height);
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4.17vw, 60px);
+}
+.header_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: clamp(24px, 3.33vw, 48px);
+}
+
+.header_logo,
+.header_link {
+  color: inherit;
+  text-decoration: none;
+}
+.header_link {
+  transition: var(--transition-slow);
+}
+.header_menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.header_menuButton img {
+  display: block;
+  width: 32px;
+  height: 22px;
+}
+@media (max-width: 767px) {
+  .header,
+  .header_container {
+    min-height: 56px;
+  }
+
+  .header_menuButton {
+    display: flex;
+  }
+
+  .header_city {
+    display: none;
+  }
+  .header_nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-black);
+
+    opacity: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity var(--transition-base),
+      transform var(--transition-base),
+      visibility 0s var(--transition-base);
+  }
+
+  .header_nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  .header_list {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .header_link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header_nav {
+    transition: none;
+  }
+}
