@@ -8,8 +8,10 @@
   color: var(--color-white);
   min-height: var(--header-height);
   align-content: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: var(--z-header);
 }
 .header_container {
@@ -51,7 +53,8 @@
   width: 32px;
   height: 22px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px),
+  (max-width: 932px) and (max-height: 500px) and (orientation: landscape) {
   .header,
   .header_container {
     min-height: 56px;
