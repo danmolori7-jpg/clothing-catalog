@@ -19,6 +19,13 @@ h2,
 p {
   margin: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: var(--header-height);
+}
 
 :root {
   /* ===========================
@@ -98,6 +105,7 @@ p {
   --space-16: 16px;
   --space-20: 20px;
   --space-24: 24px;
+  --space-28: 28px;
   --space-32: 32px;
   --space-40: 40px;
   --space-48: 48px;
@@ -152,6 +160,12 @@ p {
   --z-header: 200;
   --z-modal: 500;
   --z-toast: 1000;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 56px;
+  }
 }
 
 /* ===========================
