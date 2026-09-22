@@ -1,5 +1,6 @@
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 import { products } from "../../data/Products";
+import { ScrollLink } from "../../components/ScrollLink/ScrollLink";
 import "./ProductPage.css";
 
 export function ProductPage() {
@@ -14,9 +15,9 @@ export function ProductPage() {
       <main className="product_page product_page--empty">
         <h1 className="text-h3">Товар не найден</h1>
         <p className="body">Проверьте адрес или вернитесь к каталогу.</p>
-        <Link to="/#catalog" className="product_backLink button-large">
+        <ScrollLink to="/#catalog" className="product_backLink button-large">
           ← Вернуться в каталог
-        </Link>
+        </ScrollLink>
       </main>
     );
   }
@@ -28,7 +29,7 @@ export function ProductPage() {
       <nav className="product_breadcrumbs body-small" aria-label="Хлебные крошки">
         <ol>
           <li>
-            <Link to="/#catalog">Каталог</Link>
+            <ScrollLink to="/#catalog">Каталог</ScrollLink>
           </li>
           <li aria-hidden="true">/</li>
           <li>{product.category}</li>
@@ -67,12 +68,12 @@ export function ProductPage() {
             </div>
           </dl>
 
-          <Link
+          <ScrollLink
             className="product_collectionLink button-large"
             to="/#catalog"
           >
             Смотреть коллекцию
-          </Link>
+          </ScrollLink>
           <p className="product_note body-small">
             Демонстрационный проект. Товары и цены вымышлены, покупка недоступна.
           </p>

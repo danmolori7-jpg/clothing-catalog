@@ -2,6 +2,7 @@ import "./Hero.css";
 import hero from "../../assets/images/hero-defile.webp";
 import heroTablet from "../../assets/images/hero-defile-tablet.webp";
 import heroMobile from "../../assets/images/hero-defile-mobile.webp";
+import { ScrollLink } from "../../components/ScrollLink/ScrollLink";
 
 export function Hero() {
   return (
@@ -37,9 +38,9 @@ export function Hero() {
               образов. Лаконичный дизайн, комфорт и внимание к деталям.
             </p>
           </div>
-          <a href="#catalog" className="a_catalog button-large">
+          <ScrollLink to="/#catalog" className="a_catalog button-large">
             Перейти в каталог
-          </a>
+          </ScrollLink>
         </div>
       </div>
     </section>

@@ -1,16 +1,30 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation();
+  const previousPathname = useRef<string | null>(null);
 
   useLayoutEffect(() => {
+    const isInitialRender = previousPathname.current === null;
+    const didRouteChange =
+      previousPathname.current !== null && previousPathname.current !== pathname;
+
+    previousPathname.current = pathname;
+
     if (hash === "") {
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
+      if (isInitialRender || didRouteChange) {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: didRouteChange && pathname === "/" ? "smooth" : "auto",
+        });
+      }
+
       return;
     }
 
@@ -30,6 +44,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/products/:productId" element={<ProductPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }
