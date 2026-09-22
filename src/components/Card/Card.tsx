@@ -1,8 +1,9 @@
 import type { Product } from "../../schemas/productSchema";
 import { motion } from "motion/react";
 import { forwardRef } from "react";
+import { Link } from "react-router";
 
-export const Card = forwardRef<HTMLElement, Product>(function Card(item, ref) {
+export const Card = forwardRef<HTMLElement, Product>(function Card(props, ref) {
   return (
     <motion.article
       ref={ref}
@@ -13,14 +14,14 @@ export const Card = forwardRef<HTMLElement, Product>(function Card(item, ref) {
       exit={{ opacity: 0, y: 8 }}
       layout="position"
     >
-      <img src={item.image} alt={item.imageAlt} className="card_photo" />
+      <img src={props.image} alt={props.imageAlt} className="card_photo" />
       <div className="card_description">
-        <h3 className="body-large">{item.name}</h3>
-        <p className="button-large">{item.price} ₽</p>
+        <h3 className="body-large">{props.name}</h3>
+        <p className="button-large">{props.price} ₽</p>
       </div>
-      <a href="#card" className="card_button button-small">
+      <Link to={`/products/${props.id}`} className="card_button button-small">
         К товару
-      </a>
+      </Link>
     </motion.article>
   );
 });

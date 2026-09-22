@@ -7,6 +7,11 @@ export const productSchema = z.object({
   price: z.number(),
   image: z.string(),
   imageAlt: z.string(),
+  description: z.string(),
+  sizes: z.array(z.string()),
+  colors: z.array(z.string()),
+  material: z.string(),
+  isAvailable: z.boolean(),
 });
 
 export type Product = z.infer<typeof productSchema>;

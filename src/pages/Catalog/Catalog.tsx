@@ -67,17 +67,7 @@ export function Catalog() {
               return category === "все" || item.category === category;
             })
             .map((item) => {
-              return (
-                <Card
-                  key={item.id}
-                  id={item.id}
-                  category={item.category}
-                  name={item.name}
-                  price={item.price}
-                  image={item.image}
-                  imageAlt={item.imageAlt}
-                />
-              );
+              return <Card key={item.id} {...item} />;
             })}
         </AnimatePresence>
       </div>
