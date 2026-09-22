@@ -1,6 +1,7 @@
 import "./Header.css";
 import burgerMenuIcon from "../../assets/icons/burger-menu.svg";
 import { useState } from "react";
+import { Link } from "react-router";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,28 +23,28 @@ export function Header() {
         >
           <img src={burgerMenuIcon} alt="" />
         </button>
-        <a href="/" className="header_logo">
+        <Link to="/" className="header_logo">
           Logo
-        </a>
+        </Link>
         <nav
           className={isMenuOpen ? "header_nav is-open" : "header_nav"}
           id="nav-menu"
         >
           <ul className="header_list">
             <li>
-              <a href="#catalog" className="header_link">
+              <Link to="/#catalog" className="header_link">
                 Каталог
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about" className="header_link">
+              <Link to="/#about" className="header_link">
                 О нас
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#faq" className="header_link">
+              <Link to="/#faq" className="header_link">
                 Вопросы
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
