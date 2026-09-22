@@ -19,10 +19,6 @@ h2,
 p {
   margin: 0;
 }
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   padding-top: var(--header-height);
 }

@@ -1,13 +1,17 @@
 import "./Header.css";
 import burgerMenuIcon from "../../assets/icons/burger-menu.svg";
 import { useState } from "react";
-import { Link } from "react-router";
+import { ScrollLink } from "../ScrollLink/ScrollLink";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleMenuClick() {
     setIsMenuOpen((previousState) => !previousState);
+  }
+
+  function handleNavigation() {
+    setIsMenuOpen(false);
   }
 
   return (
@@ -23,28 +27,44 @@ export function Header() {
         >
           <img src={burgerMenuIcon} alt="" />
         </button>
-        <Link to="/" className="header_logo">
+        <ScrollLink
+          to="/"
+          className="header_logo"
+          onClick={handleNavigation}
+        >
           Logo
-        </Link>
+        </ScrollLink>
         <nav
           className={isMenuOpen ? "header_nav is-open" : "header_nav"}
           id="nav-menu"
         >
           <ul className="header_list">
             <li>
-              <Link to="/#catalog" className="header_link">
+              <ScrollLink
+                to="/#catalog"
+                className="header_link"
+                onClick={handleNavigation}
+              >
                 Каталог
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link to="/#about" className="header_link">
+              <ScrollLink
+                to="/#about"
+                className="header_link"
+                onClick={handleNavigation}
+              >
                 О нас
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link to="/#faq" className="header_link">
+              <ScrollLink
+                to="/#faq"
+                className="header_link"
+                onClick={handleNavigation}
+              >
                 Вопросы
-              </Link>
+              </ScrollLink>
             </li>
           </ul>
         </nav>
