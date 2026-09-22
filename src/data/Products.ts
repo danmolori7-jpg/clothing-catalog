@@ -1,14 +1,14 @@
 import type { Product } from "../schemas/productSchema";
-import photo1 from "../assets/images/1.webp";
-import photo2 from "../assets/images/2.webp";
-import photo3 from "../assets/images/3.webp";
-import photo4 from "../assets/images/4.webp";
-import photo5 from "../assets/images/5.webp";
-import photo6 from "../assets/images/6.webp";
-import photo7 from "../assets/images/7.webp";
-import photo8 from "../assets/images/8.webp";
+import photo1 from "../assets/images/1.jpg";
+import photo2 from "../assets/images/2.jpg";
+import photo3 from "../assets/images/3.jpg";
+import photo4 from "../assets/images/4.jpg";
+import photo5 from "../assets/images/5.jpg";
+import photo6 from "../assets/images/6.jpg";
+import photo7 from "../assets/images/7.jpg";
+import photo8 from "../assets/images/8.jpg";
 
-// Демоданные: цены выдуманы, фото пока не соответствуют товарам.
+// Демоданные: товары и цены выдуманы для демонстрационного проекта.
 export const products: Product[] = [
   {
     id: "1",
@@ -16,11 +16,11 @@ export const products: Product[] = [
     category: "куртка",
     price: 5990,
     image: photo1,
-    imageAlt: "Крупный план бордовых кожаных перчаток",
-    description: "Лаконичная модель для повседневных и деловых образов.",
+    imageAlt: "Бордовая женская куртка прямого кроя",
+    description: "Структурированная куртка прямого кроя для городских образов.",
     sizes: ["44", "46", "48", "50", "52"],
-    colors: ["Бордовый", "Чёрный"],
-    material: "70% хлопок, 30% полиэстер",
+    colors: ["Бордовый", "Графитовый"],
+    material: "65% хлопок, 35% полиэстер",
     isAvailable: true,
   },
   {
@@ -29,11 +29,11 @@ export const products: Product[] = [
     category: "пальто",
     price: 12990,
     image: photo2,
-    imageAlt: "Крупный план голубых джинсов с бежевой нашивкой",
-    description: "Свободный силуэт и спокойная фактура для базового гардероба.",
+    imageAlt: "Длинное женское пальто тёплого бежевого цвета",
+    description: "Длинное пальто свободного кроя с мягкой линией плеча.",
     sizes: ["44", "46", "48", "50", "52", "54"],
-    colors: ["Голубой", "Серый"],
-    material: "80% хлопок, 20% полиэстер",
+    colors: ["Бежевый", "Молочный"],
+    material: "70% шерсть, 30% полиамид",
     isAvailable: true,
   },
   {
@@ -42,11 +42,11 @@ export const products: Product[] = [
     category: "пуховик",
     price: 15990,
     image: photo3,
-    imageAlt: "Синее трикотажное изделие с высоким воротником",
-    description: "Тёплая модель с высоким воротником для прохладной погоды.",
+    imageAlt: "Тёмно-синий женский пуховик с высоким воротником",
+    description: "Тёплый минималистичный пуховик с высоким защитным воротником.",
     sizes: ["46", "48", "50", "52", "54", "56"],
-    colors: ["Синий", "Графитовый"],
-    material: "60% шерсть, 40% акрил",
+    colors: ["Тёмно-синий", "Графитовый"],
+    material: "100% полиэстер",
     isAvailable: true,
   },
   {
@@ -55,11 +55,11 @@ export const products: Product[] = [
     category: "куртка",
     price: 7990,
     image: photo4,
-    imageAlt: "Красная клетчатая рубашка на модели",
-    description: "Свободная модель для повседневных и деловых образов.",
+    imageAlt: "Бордовая женская куртка-бомбер свободного кроя",
+    description: "Свободный бомбер из плотной ткани с эластичными манжетами.",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58"],
-    colors: ["Красный", "Чёрный"],
-    material: "70% хлопок, 30% поплин",
+    colors: ["Бордовый", "Чёрный"],
+    material: "100% хлопок",
     isAvailable: true,
   },
   {
@@ -68,11 +68,11 @@ export const products: Product[] = [
     category: "пальто",
     price: 14990,
     image: photo5,
-    imageAlt: "Крупный план оливкового трикотажа с молнией",
-    description: "Фактурная модель прямого кроя с акцентной металлической молнией.",
+    imageAlt: "Длинное оливковое женское пальто с поясом",
+    description: "Пальто с поясом и широкими лацканами для спокойных многослойных образов.",
     sizes: ["44", "46", "48", "50", "52"],
     colors: ["Оливковый", "Чёрный"],
-    material: "55% шерсть, 45% акрил",
+    material: "60% шерсть, 40% полиэстер",
     isAvailable: true,
   },
   {
@@ -81,10 +81,10 @@ export const products: Product[] = [
     category: "пуховик",
     price: 18990,
     image: photo6,
-    imageAlt: "Коричневые ботильоны на тёмной упаковочной бумаге",
-    description: "Объёмная утеплённая модель для холодного сезона.",
+    imageAlt: "Светло-серый женский пуховик свободного кроя",
+    description: "Объёмный светлый пуховик с высоким воротником для холодного сезона.",
     sizes: ["46", "48", "50", "52", "54", "56"],
-    colors: ["Коричневый", "Чёрный"],
+    colors: ["Светло-серый", "Графитовый"],
     material: "100% полиэстер",
     isAvailable: true,
   },
@@ -94,11 +94,11 @@ export const products: Product[] = [
     category: "куртка",
     price: 9990,
     image: photo7,
-    imageAlt: "Голубой шарф с бахромой на металлическом стуле",
-    description: "Лёгкая модель спокойного оттенка для многослойных образов.",
+    imageAlt: "Молочная женская ветровка с высоким воротником",
+    description: "Лёгкая ветровка с чистым силуэтом и скрытой застёжкой.",
     sizes: ["44", "46", "48", "50", "52"],
-    colors: ["Голубой", "Молочный"],
-    material: "65% хлопок, 35% вискоза",
+    colors: ["Молочный", "Бежевый"],
+    material: "70% хлопок, 30% полиэстер",
     isAvailable: true,
   },
   {
@@ -107,11 +107,11 @@ export const products: Product[] = [
     category: "пальто",
     price: 16990,
     image: photo8,
-    imageAlt: "Чёрно-белое фото джинсов и белой рубашки на модели",
-    description: "Классическая модель с чистыми линиями и свободной посадкой.",
+    imageAlt: "Классическое длинное женское пальто чёрного цвета",
+    description: "Классическое пальто с чёткими лацканами и прямой посадкой.",
     sizes: ["44", "46", "48", "50", "52", "54"],
-    colors: ["Чёрный", "Серый"],
-    material: "75% хлопок, 25% полиэстер",
+    colors: ["Чёрный", "Графитовый"],
+    material: "70% шерсть, 30% полиэстер",
     isAvailable: true,
   },
 ];
