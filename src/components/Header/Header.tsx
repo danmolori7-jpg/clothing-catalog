@@ -50,20 +50,11 @@ export function Header() {
             </li>
             <li>
               <ScrollLink
-                to="/#about"
+                to="/#contacts"
                 className="header_link"
                 onClick={handleNavigation}
               >
-                О нас
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink
-                to="/#faq"
-                className="header_link"
-                onClick={handleNavigation}
-              >
-                Вопросы
+                Связаться
               </ScrollLink>
             </li>
           </ul>

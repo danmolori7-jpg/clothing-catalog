@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export function Footer() {
   return (
-    <footer className="footer" id="about">
+    <footer className="footer" id="contacts">
       <div className="footer_container">
         <div className="footer_intro">
           <ScrollLink
@@ -36,8 +36,8 @@ export function Footer() {
           <p>Брянск</p>
         </div>
 
-        <div className="footer_questions" id="faq">
-          <p className="footer_heading body-small">Вопросы</p>
+        <div className="footer_questions">
+          <p className="footer_heading body-small">Связаться</p>
           <a href="https://t.me/belinimoz" target="_blank" rel="noreferrer">
             Написать автору
           </a>
