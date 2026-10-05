@@ -26,7 +26,10 @@ export function ProductPage() {
 
   return (
     <main className="product_page">
-      <nav className="product_breadcrumbs body-small" aria-label="Хлебные крошки">
+      <nav
+        className="product_breadcrumbs body-small"
+        aria-label="Хлебные крошки"
+      >
         <ol>
           <li>
             <ScrollLink to="/#catalog">Каталог</ScrollLink>
@@ -75,7 +78,8 @@ export function ProductPage() {
             Смотреть коллекцию
           </ScrollLink>
           <p className="product_note body-small">
-            Демонстрационный проект. Товары и цены вымышлены, покупка недоступна.
+            Учебный демонстрационный проект. Товар не предназначен для продажи.
+            Характеристики и цена вымышлены.
           </p>
         </div>
       </article>

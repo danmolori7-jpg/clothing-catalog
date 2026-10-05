@@ -50,9 +50,19 @@ export function Footer() {
           <a href="https://t.me/belinimoz" target="_blank" rel="noreferrer">
             Dan
           </a>
+          {" · "}
+          <a
+            href={`${import.meta.env.BASE_URL}licenses/README.txt`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Лицензии
+          </a>
         </p>
         <p className="footer_disclaimer body-small">
-          Товары и цены вымышлены.
+          Учебный демонстрационный проект. Не является интернет-магазином или
+          публичной офертой. Товары, изображения, характеристики и цены
+          вымышлены. Покупка недоступна.
         </p>
       </div>
     </footer>

@@ -19,7 +19,7 @@ export function Hero() {
 
           <img
             src={hero}
-            alt="Женщина в чёрной верхней одежде"
+            alt="Женщина в чёрном костюме, лицо скрыто волосами"
             className="hero_photo"
           />
         </picture>
@@ -28,8 +28,8 @@ export function Hero() {
             <h1 className="text-h1">Женская верхняя одежда</h1>
             <h2 className="text-h2">
               Современные силуэты. <br />
-              Натуральные материалы. <br />
-              Размеры 44–60.
+              Выразительные фактуры. <br />
+              Размеры 44–58.
             </h2>
           </div>
           <div className="description_container_text">
@@ -38,6 +38,10 @@ export function Hero() {
               образов. Лаконичный дизайн, комфорт и внимание к деталям.
             </p>
           </div>
+          <p className="hero_disclaimer body-small">
+            Учебный проект для портфолио. Каталог не является
+            интернет-магазином. Товары не предназначены для продажи.
+          </p>
           <ScrollLink to="/#catalog" className="a_catalog button-large">
             Перейти в каталог
           </ScrollLink>
