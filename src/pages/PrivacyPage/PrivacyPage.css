@@ -1,0 +1,111 @@
+.privacy_page {
+  min-height: calc(100svh - var(--header-height));
+  padding: 64px clamp(32px, 8.33vw, 120px) 96px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.privacy_content {
+  width: min(100%, 880px);
+  margin: 0 auto;
+}
+
+.privacy_backLink {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.privacy_header {
+  margin: 48px 0 64px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.privacy_eyebrow {
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.privacy_title {
+  max-width: 760px;
+}
+
+.privacy_updated {
+  margin-top: 16px;
+  color: var(--color-text-secondary);
+}
+
+.privacy_section + .privacy_section {
+  margin-top: 48px;
+}
+
+.privacy_section h2 {
+  margin: 0 0 20px;
+}
+
+.privacy_section p {
+  max-width: 760px;
+  color: var(--color-text-secondary);
+}
+
+.privacy_section p + p {
+  margin-top: 16px;
+}
+
+.privacy_section a {
+  color: var(--color-accent);
+  text-underline-offset: 4px;
+  transition: color var(--transition-base);
+}
+
+.privacy_backLink:focus-visible,
+.privacy_section a:focus-visible {
+  outline: 3px solid var(--color-primary-200);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .privacy_backLink:hover,
+  .privacy_section a:hover {
+    color: var(--color-hover);
+  }
+}
+
+@media (max-width: 767px) {
+  .privacy_page {
+    padding: 40px 16px 64px;
+  }
+
+  .privacy_header {
+    margin: 32px 0 48px;
+    padding-bottom: 24px;
+  }
+
+  .privacy_section + .privacy_section {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 932px) and (max-height: 500px) and (orientation: landscape) {
+  .privacy_page {
+    padding: 32px 24px 56px;
+  }
+
+  .privacy_header {
+    margin: 24px 0 40px;
+    padding-bottom: 20px;
+  }
+
+  .privacy_section + .privacy_section {
+    margin-top: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy_backLink,
+  .privacy_section a {
+    transition: none;
+  }
+}

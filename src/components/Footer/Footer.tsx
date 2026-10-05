@@ -58,6 +58,8 @@ export function Footer() {
           >
             Лицензии
           </a>
+          {" · "}
+          <ScrollLink to="/privacy">Политика конфиденциальности</ScrollLink>
         </p>
         <p className="footer_disclaimer body-small">
           Учебный демонстрационный проект. Не является интернет-магазином или
